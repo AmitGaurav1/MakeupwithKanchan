@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap");
+
+/* LOGIN CONTAINER */
+.login-container {
+  height: 100vh; /* full viewport height */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;
+  animation: fadeIn 1.2s ease;
+}
+
+/* GLASS CARD */
+.login-card {
+  width: 360px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(255, 96, 160, 0.4);
+  text-align: center;
+}
+
+/* HEADING */
+.login-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  background: linear-gradient(45deg, #ff4b7d, #9b2fae);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.login-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #6b1b60;
+}
+
+/* INPUTS */
+.input-box {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.input-box label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b1b60;
+  pointer-events: none;
+  transition: 0.3s;
+  font-size: 13px;
+}
+
+/* FLOAT LABEL */
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -6px;
+  font-size: 11px;
+  color: #d4006a;
+}
+
+/* BUTTONS */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ff5fa2, #b94ed6);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  box-shadow: 0 0 20px rgba(255, 90, 170, 0.6);
+  transform: scale(1.03);
+}
+
+.google-btn {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #5a174f;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background: #fff;
+}
+
+/* EXTRA */
+.divider {
+  display: block;
+  margin: 12px 0;
+  font-size: 12px;
+  color: #6b1b60;
+}
+
+.signup {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.signup a {
+  color: #d4006a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

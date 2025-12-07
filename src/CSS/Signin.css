@@ -1,0 +1,101 @@
+ .signin-container{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .signin-box{
+            background:rgba(255,255,255,0.35);
+            backdrop-filter:blur(10px);
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 8px 25px rgba(255,96,160,0.35);
+            width:350px;
+            text-align:center;
+            font-family:'Poppins', sans-serif;
+            animation:fadeIn 1s ease;
+        }
+
+        .signin-box h1{
+            font-family:'Playfair Display', serif;
+            font-size:32px;
+            background:linear-gradient(45deg,#ff4b7d,#9b2fae);
+            -webkit-background-clip:text;
+            color:transparent;
+            margin-bottom:30px;
+        }
+
+        .signin-box input{
+            width:100%;
+            padding:12px 15px;
+            margin:10px 0;
+            border:none;
+            border-radius:15px;
+            outline:none;
+            font-size:16px;
+        }
+
+        .signin-box button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:20px;
+            background:linear-gradient(45deg,#ff5fa2,#b94ed6);
+            color:#fff;
+            font-size:16px;
+            cursor:pointer;
+            transition:.3s;
+            margin-top:15px;
+        }
+
+        .signin-box button:hover{
+            transform:scale(1.05);
+            box-shadow:0 0 15px rgba(255,90,170,.6);
+        }
+
+        .signin-box .links{
+            margin-top:15px;
+            font-size:14px;
+        }
+
+        .signin-box .links a{
+            text-decoration:none;
+            color:#6b1b60;
+            transition:.3s;
+        }
+
+        .signin-box .links a:hover{
+            color:#d4006a;
+            text-shadow:0 0 8px rgba(212,0,106,.6);
+        }
+
+        @keyframes fadeIn{
+            from{opacity:0;transform:translateY(-20px);}
+            to{opacity:1;transform:translateY(0);}
+        }
+
+        .user-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.logout-btn {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ✅ Show logout on hover */
+.user-wrapper:hover .logout-btn {
+  display: block;
+}
