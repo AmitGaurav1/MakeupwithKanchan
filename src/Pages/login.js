@@ -1,4 +1,5 @@
 import React, { useState }  from 'react';
+import Footer from '../Components/Footer';
 import '../CSS/login.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -49,45 +50,47 @@ function Login() {
 
     if(data){
         localStorage.setItem("user", JSON.stringify(data.username));
-        console.log(data)
-        navigate("/home");
+        navigate("/");
     }
     
   };
 
 
   return (
-    <div class="login-container">
-        <div class="login-card">
-            <h2>Welcome Back 💖</h2>
-            <p>Please login to continue</p>
+    <div>
+      <div className="login-container">
+          <div className="login-card">
+              <h2>Welcome Back 💖</h2>
+              <p>Please login to continue</p>
 
-            <form onSubmit={handleSubmit}>
-                <div class="input-box">
-                    <input type="text" onChange={setName} required />
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <input type="email" onChange={setEmail} required />
-                    <label>Email</label>
-                </div>
+              <form onSubmit={handleSubmit}>
+                  <div className="input-box">
+                      <input type="text" onChange={setName} required />
+                      <label>Username</label>
+                  </div>
+                  <div className="input-box">
+                      <input type="email" onChange={setEmail} required />
+                      <label>Email</label>
+                  </div>
 
-                <div class="input-box">
-                    <input type="password" onChange={setPassword} required />
-                    <label>Password</label>
-                </div>
+                  <div className="input-box">
+                      <input type="password" onChange={setPassword} required />
+                      <label>Password</label>
+                  </div>
 
-                <button class="login-btn" type="submit">Login</button>
+                  <button className="login-btn" type="submit">Login</button>
 
-                <span class="divider">or</span>
+                  <span className="divider">or</span>
 
-                <button class="google-btn">Login with Google</button>
+                  <button className="google-btn">Login with Google</button>
 
-                <p class="signup">
-                    Don’t have an account? <a href="/signin">Register</a>
-                </p>
-            </form>
-        </div>
+                  <p className="signup">
+                      Don't have an account? <a href="/signin">Register</a>
+                  </p>
+              </form>
+          </div>
+      </div>
+      <Footer />
     </div>
   );
 }

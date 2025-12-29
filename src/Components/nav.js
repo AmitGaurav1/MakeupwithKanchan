@@ -1,21 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import AuthSection from './AuthSection';
+import CartIcon from './CartIcon';
 import '../CSS/nav.css'
 
-function nav() {
+function Nav() {
   return (
     <div>
         <nav>
-    <div class="logo">GlowMuse</div>
+    <Link to="/" className="logo">GlowMuse</Link>
 
     <ul>
-        <li><a href="/">Makeup</a></li>
-        <li><a href="/">Skincare</a></li>
-        <li><a href="/">Beauty Tips</a></li>
-        <li><a href="/">Tutorials</a></li>
+        <li><Link to="/makeup">Makeup</Link></li>
+        <li><Link to="/skincare">Skincare</Link></li>
+        <li><Link to="/beauty-tips">Beauty Tips</Link></li>
+        <li><Link to="/tutorials">Tutorials</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
     </ul>
 
-    <AuthSection />
+    <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+      <CartIcon />
+      <AuthSection />
+    </div>
 
     
 </nav>
@@ -23,4 +30,4 @@ function nav() {
   )
 }
 
-export default nav
+export default Nav

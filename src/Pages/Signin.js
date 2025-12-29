@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Components/Footer';
 import '../CSS/Signin.css';
 
 function Signin() {
@@ -42,20 +43,21 @@ function Signin() {
 
   return (
     <div>
-    <div class="signin-container">
-        <div class="signin-box">
+    <div className="signin-container">
+        <div className="signin-box">
             <h1>Sign In</h1>
             <form onSubmit={handleSubmit}>
                 <input type="email" placeholder="Email" onChange={setEmail} required />
                 <input type="password" placeholder="Password" onChange={setPassword} required />
                 <button type="submit">Login</button>
             </form>
-            <div class="links">
+            <div className="links">
                 <p>Don't have an account? <a href="/">Sign Up</a></p>
                 <p><a href="/">Forgot Password?</a></p>
             </div>
         </div>
     </div>
+    <Footer />
     </div>
   );
 }
